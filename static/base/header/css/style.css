@@ -31,7 +31,6 @@
 	font-weight: normal;
 	src: local("Helvetica Neue Bold"), url("../fonts/HelveticaNeueBold.woff") format("woff");
 }
-
 html,
 body {
 	height: 100%;

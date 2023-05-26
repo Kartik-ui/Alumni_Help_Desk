@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ANMS</title>
+    <title>AHD</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -30,9 +30,9 @@
 
 <body>
     <header class="header-section" style="margin-bottom: 76px">
-        <nav class="navbar navbar-expand-md navbar-dark bg-secondary site-navbar fixed-top">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark site-navbar fixed-top">
             <a class="navbar-brand site-logo" href="{% url 'home' %}">
-                <h2><span class="text-light">Alumni</span> Network Management System</h2>
+                <h2><span class="text-light">Alumni</span> Help Desk</h2>
             </a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,10 @@
                         <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Current Events</a>
+                        <a class="nav-link" href="{% url 'gallery' %}">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:8001">Events</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'show-college' %}">Colleges</a>
@@ -55,9 +58,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                     </li>
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <a class="nav-link" href="#">Alumni Connect Chat</a>
-                    </li>
+                    </li> -->
                     {%if not request.user.is_college %}
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'alumni-profile' request.user.id%}">Profile</a>

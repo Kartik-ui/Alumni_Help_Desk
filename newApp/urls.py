@@ -48,5 +48,10 @@ urlpatterns = [
         'authenticate/<int:pk>/',
         collegeView.AlumniAuthenticationView.as_view(),
         name="alumni-authentication"
+        ),
+    path(
+        'gallery',
+        views.gallery,
+        name="gallery"
         )
 ]+static(settings.MEDIA_URL, document_root=settings. MEDIA_ROOT)

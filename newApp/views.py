@@ -16,6 +16,8 @@ def home(request):
     }
     return render(request, 'home.html',context)
 
+def gallery(request):
+    return render(request,'hover.html')
 
 def AlumniListView(request):
     total = User.objects.filter(Verified=True).filter(is_college=False).all()
