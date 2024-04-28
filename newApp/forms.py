@@ -7,6 +7,10 @@ class AlumniSignupForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = User
 
+    # def __init__(self, *args, **kwargs):
+    #     super(AlumniSignupForm, self).__init__(CollegeSignupForm)
+    #     self.fields['LinkedIn'].required = False
+
     def save(self, commit=True):
         user = super().save(commit=False)
         user.is_college = False
@@ -42,6 +46,8 @@ class RegistrationForm(forms.ModelForm):
             "Work",
             "Year_Joined",
             "Branch",
+            "LinkedIn",
+            "Phone",
             "Image"
         ]
 

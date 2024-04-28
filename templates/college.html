@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {%block content%}
+<link rel="stylesheet" href="/static/base/css/style22.css">
 <div class="container ">
     <br>
     <div class="card testimonial-card mr-3 mb-3 ml-3">
@@ -38,7 +39,9 @@
                         <hr>
                         <h4>About:</h4>
                         <h6>{{alumni.About|safe|linebreaks}}</h6>
-                        <h5 class="text-info">Contact: {{alumni.email}}</h5>
+                        <h5 class="text-info"><a  href="mailto:{{alumni.email}}">{{alumni.email}}</a></h5>
+                        <h5 class="text-info"><a href="{{alumni.LinkedIn}}">LinkedIn</a></h5>
+                        <h5 class="text-info">{{alumni.Phone}}</h5>
                     </div>
                     {% if request.user.is_authenticated %}
                     {% if alumni.Verified %}

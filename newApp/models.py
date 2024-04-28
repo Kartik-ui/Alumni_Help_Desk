@@ -10,7 +10,7 @@ COLLEGE_CHOICES = (
 
 
 class User(AbstractUser):
-    #    is_alumni = models.BooleanField(default=False)
+    # is_alumni = models.BooleanField(default=False)
     is_college = models.BooleanField(default=False)
     College = models.CharField(
         max_length=80,
@@ -18,9 +18,11 @@ class User(AbstractUser):
         default="None"
     )
     About = models.TextField(max_length=800)
-    Work = models.TextField(max_length=50)
+    Work = models.TextField(max_length=500)
     Year_Joined = models.CharField(max_length=4)
     Branch = models.CharField(max_length=50)
+    LinkedIn = models.CharField(max_length=150,default='',blank=True,null=True)
+    Phone = models.CharField(max_length=10,default='',blank=True,null=True)
     Image = models.ImageField(
         upload_to='images',
         default='default/test.png'

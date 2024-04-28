@@ -4,15 +4,17 @@
   box-sizing: border-box;
 }
 
+
+
 html,
 body {
   padding: 0;
   font-family: "Jost", sans-serif;
-  background-color: rgb(16, 16, 17);
+  background-color: #fefede;
 }
 
 h1 {
-  color: white;
+  color: rgb(11, 9, 9);
   text-align: center;
 }
 
